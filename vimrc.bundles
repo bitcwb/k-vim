@@ -278,6 +278,8 @@ endif
 
 " endif
 
+" 增加根据makefile或者cmake生成ycm配置的插件
+Plug 'rdnetto/YCM-Generator'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -409,9 +411,9 @@ call plug#end()
 
 
 " ultisnips {{{
-    let g:UltiSnipsExpandTrigger       = "<s-j>"
-    let g:UltiSnipsJumpForwardTrigger  = "<s-n>"
-    let g:UltiSnipsJumpBackwardTrigger = "<s-p>"
+    let g:UltiSnipsExpandTrigger       = "<c-j>"
+    let g:UltiSnipsJumpForwardTrigger  = "<c-n>"
+    let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
     let g:UltiSnipsSnippetDirectories  = ['UltiSnips']
     let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
     " 定义存放代码片段的文件夹 .vim/UltiSnips下，使用自定义和默认的，将会的到全局，有冲突的会提示
