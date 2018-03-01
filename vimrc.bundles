@@ -51,8 +51,7 @@ Plug 'docunext/closetag.vim', { 'for': ['html', 'xml'] }
 " 快速注释
 Plug 'scrooloose/nerdcommenter'
 
-
-" 快速加入修改环绕字符
+ " 快速加入修改环绕字符
 " for repeat -> enhance surround.vim, . to repeat command
 Plug 'tpope/vim-repeat' | Plug 'tpope/vim-surround'
 " trailingwhitespace
@@ -71,14 +70,14 @@ Plug 'Lokaltog/vim-easymotion'
 " quickscope
 Plug 'unblevable/quick-scope'
 
-Plug 'vim-scripts/matchit.zip'
+" Plug 'vim-scripts/matchit.zip'
 " signature
 " 显示marks - 方便自己进行标记和跳转
 " m[a-zA-Z] add mark
 " '[a-zA-Z] go to mark
 " m<Space>  del all marks
 " m/        list all marks
-Plug 'kshenoy/vim-signature'
+" Plug 'kshenoy/vim-signature'
 
 " quick selection and edit
 " expandregion
@@ -93,6 +92,7 @@ Plug 'terryma/vim-multiple-cursors'
 " change to https://github.com/ctrlpvim/ctrlp.vim
 " ctrlp ctrlpfunky
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
+
 " ctrlsf
 " 类似sublimetext的搜索
 " In CtrlSF window:
@@ -100,7 +100,7 @@ Plug 'ctrlpvim/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
 " t       在tab中打开(建议)
 " T - Lkie t but focus CtrlSF window instead of opened new tab.
 " q - Quit CtrlSF window.
-Plug 'dyng/ctrlsf.vim'
+" Plug 'dyng/ctrlsf.vim'
 " incsearch
 " Plug 'haya14busa/incsearch.vim'
 " map /  <Plug>(incsearch-forward)
@@ -109,7 +109,7 @@ Plug 'dyng/ctrlsf.vim'
 
 " quick run
 " quickrun
-Plug 'thinca/vim-quickrun'
+" Plug 'thinca/vim-quickrun'
 
 " git
 " fugitive
@@ -119,7 +119,7 @@ Plug 'airblade/vim-gitgutter'
 
 " gundo
 " edit history, 可以查看回到某个历史状态
-Plug 'sjl/gundo.vim'
+" Plug 'sjl/gundo.vim'
 
 " view
 " airline
@@ -147,13 +147,13 @@ Plug 'majutsushi/tagbar'
 
 " text object
 " 支持自定义文本对象
-Plug 'kana/vim-textobj-user'
+" Plug 'kana/vim-textobj-user'
 " 增加行文本对象: l   dal yal cil
-Plug 'kana/vim-textobj-line'
+" Plug 'kana/vim-textobj-line'
 " 增加文件文本对象: e   dae yae cie
-Plug 'kana/vim-textobj-entire'
+" Plug 'kana/vim-textobj-entire'
 " 增加缩进文本对象: i   dai yai cii - 相同缩进属于同一块
-Plug 'kana/vim-textobj-indent'
+" Plug 'kana/vim-textobj-indent'
 
 if count(g:bundle_groups, 'tmux')
     " tmux
@@ -193,42 +193,42 @@ if count(g:bundle_groups, 'python')
     let g:vim_isort_map = '<C-i>'
 endif
 
-if count(g:bundle_groups, 'php')
-    " piv
-    " shift-v可以查看函数手册 / leader-pd生成注释
-    Plug 'spf13/PIV'
-endif
+" if count(g:bundle_groups, 'php')
+    " " piv
+    " " shift-v可以查看函数手册 / leader-pd生成注释
+    " Plug 'spf13/PIV'
+" endif
 
-if count(g:bundle_groups, 'ruby')
-    Plug 'vim-ruby/vim-ruby'
-    Plug 'tpope/vim-rails'
-    " dir / dar
-    Plug 'nelstrom/vim-textobj-rubyblock'
+" if count(g:bundle_groups, 'ruby')
+    " Plug 'vim-ruby/vim-ruby'
+    " Plug 'tpope/vim-rails'
+    " " dir / dar
+    " Plug 'nelstrom/vim-textobj-rubyblock'
 
-    " 有bug, 和当前有冲突, 尚未解决, 不要打开 => TODO: solve this problem
-    " Plug 'tpope/vim-endwise'
-endif
+    " " 有bug, 和当前有冲突, 尚未解决, 不要打开 => TODO: solve this problem
+    " " Plug 'tpope/vim-endwise'
+" endif
 
-if count(g:bundle_groups, 'javascript')
-    " javascript
-    " 注意: syntax这个插件要放前面
-    Plug 'othree/yajs.vim' | Plug 'pangloss/vim-javascript'
-    " Plug 'jelera/vim-javascript-syntax' | Plug 'pangloss/vim-javascript'
+" if count(g:bundle_groups, 'javascript')
+    " " javascript
+    " " 注意: syntax这个插件要放前面
+    " Plug 'othree/yajs.vim' | Plug 'pangloss/vim-javascript'
+    " " Plug 'jelera/vim-javascript-syntax' | Plug 'pangloss/vim-javascript'
 
-    " TODO: jquery? for, remove or keep
-    Plug 'othree/javascript-libraries-syntax.vim'
-    let g:used_javascript_libs = 'jquery,underscore,backbone'
+    " " TODO: jquery? for, remove or keep
+    " Plug 'othree/javascript-libraries-syntax.vim'
+    " let g:used_javascript_libs = 'jquery,underscore,backbone'
 
-    " for javascript 自动补全, 配合YCM, 需要安装全局环境的（非nvm中) node.js&npm
-    " 安装完成后还需要在 bundle/tern_for_vim 下执行 npm install 安装依赖 `cd ~/.vim/bundle/tern_for_vim && npm install`
-    " see https://github.com/marijnh/tern_for_vim
-    " Plug 'marijnh/tern_for_vim', {'do': 'npm install'}
-endif
+    " " for javascript 自动补全, 配合YCM, 需要安装全局环境的（非nvm中) node.js&npm
+    " " 安装完成后还需要在 bundle/tern_for_vim 下执行 npm install 安装依赖 `cd ~/.vim/bundle/tern_for_vim && npm install`
+    " " see https://github.com/marijnh/tern_for_vim
+    " " Plug 'marijnh/tern_for_vim', {'do': 'npm install'}
+" endif
 
 
-if count(g:bundle_groups, 'coffeescript')
-    Plug 'kchmck/vim-coffee-script'
-endif
+" if count(g:bundle_groups, 'coffeescript')
+    " Plug 'kchmck/vim-coffee-script'
+" endif
 
 " if count(g:bundle_groups, 'shell')
     " Plug 'Shougo/vimshell.vim'
@@ -239,21 +239,21 @@ if count(g:bundle_groups, 'json')
     Plug 'elzr/vim-json', {'for': 'json'}
 endif
 
-if count(g:bundle_groups, 'css')
-    " css
-    " not work in iterm2 which termianl selection is not xterm-256, and it slow
-    " Plug 'ap/vim-css-color'
+" if count(g:bundle_groups, 'css')
+    " " css
+    " " not work in iterm2 which termianl selection is not xterm-256, and it slow
+    " " Plug 'ap/vim-css-color'
 
-    " 这个有坑, see issue https://github.com/wklken/k-vim/issues/49
-    " Plug 'gorodinskiy/vim-coloresque'
-    " Plug 'lilydjwg/colorizer'
-endif
+    " " 这个有坑, see issue https://github.com/wklken/k-vim/issues/49
+    " " Plug 'gorodinskiy/vim-coloresque'
+    " " Plug 'lilydjwg/colorizer'
+" endif
 
-if count(g:bundle_groups, 'less')
-    " ###### vim.less : less 自动更新##########
-    " Plug 'groenewege/vim-less'
-    " autocmd BufWritePost *.less :!lessc % > %:p:r.css
-endif
+" if count(g:bundle_groups, 'less')
+    " " ###### vim.less : less 自动更新##########
+    " " Plug 'groenewege/vim-less'
+    " " autocmd BufWritePost *.less :!lessc % > %:p:r.css
+" endif
 
 if count(g:bundle_groups, 'html')
     " ###### emmet HTML complete #########
@@ -266,17 +266,17 @@ endif
 
 
 " this is just for beta version
-if count(g:bundle_groups, 'beta')
-    " indent
-    Plug 'nathanaelkane/vim-indent-guides'
-    " <leader>ig to trigger
-    let g:indent_guides_start_level = 2
-    let g:indent_guides_guide_size = 1
-    let g:indent_guides_auto_colors = 0
-    autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
-    autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=black
+" if count(g:bundle_groups, 'beta')
+    " " indent
+    " Plug 'nathanaelkane/vim-indent-guides'
+    " " <leader>ig to trigger
+    " let g:indent_guides_start_level = 2
+    " let g:indent_guides_guide_size = 1
+    " let g:indent_guides_auto_colors = 0
+    " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
+    " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=black
 
-endif
+" endif
 
 
 " Add plugins to &runtimepath
@@ -408,9 +408,9 @@ call plug#end()
 
 
 " ultisnips {{{
-    let g:UltiSnipsExpandTrigger       = "<tab>"
-    let g:UltiSnipsJumpForwardTrigger  = "<tab>"
-    let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+    let g:UltiSnipsExpandTrigger       = "<c-j>"
+    let g:UltiSnipsJumpForwardTrigger  = "<c-n>"
+    let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
     let g:UltiSnipsSnippetDirectories  = ['UltiSnips']
     let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
     " 定义存放代码片段的文件夹 .vim/UltiSnips下，使用自定义和默认的，将会的到全局，有冲突的会提示
@@ -418,6 +418,7 @@ call plug#end()
     map <leader>us :UltiSnipsEdit<CR>
 
     " ctrl+j/k 进行选择
+    " shift+j/k 进行选择
     func! g:JInYCM()
         if pumvisible()
             return "\<C-n>"
@@ -759,21 +760,21 @@ call plug#end()
 
 " ################### 语言相关 ###################
 
-" quickrun {{{
-    let g:quickrun_config = {
-    \   "_" : {
-    \       "outputter" : "message",
-    \   },
-    \}
+" " quickrun {{{
+    " let g:quickrun_config = {
+    " \   "_" : {
+    " \       "outputter" : "message",
+    " \   },
+    " \}
 
-    let g:quickrun_no_default_key_mappings = 1
-    nmap <Leader>r <Plug>(quickrun)
-    map <F10> :QuickRun<CR>
-" }}}
+    " let g:quickrun_no_default_key_mappings = 1
+    " nmap <Leader>r <Plug>(quickrun)
+    " map <F10> :QuickRun<CR>
+" " }}}
 
 
 " pythonsyntax {{{
-    let python_highlight_all = 1
+    " let python_highlight_all = 1
 " }}}
 
 " piv {{{
@@ -796,19 +797,19 @@ call plug#end()
 " }}}
 
 " markdown {{{
-    let g:vim_markdown_folding_disabled=1
+    " let g:vim_markdown_folding_disabled=1
 " }}}
 
 
 " javascript {{{
     " pangloss/vim-javascript
-    let g:html_indent_inctags = "html,body,head,tbody"
-    let g:html_indent_script1 = "inc"
-    let g:html_indent_style1 = "inc"
+    " let g:html_indent_inctags = "html,body,head,tbody"
+    " let g:html_indent_script1 = "inc"
+    " let g:html_indent_style1 = "inc"
 " }}}
 
 " json {{{
-    let g:vim_json_syntax_conceal = 0
+    " let g:vim_json_syntax_conceal = 0
 " }}}
 
 " css {{{
@@ -820,19 +821,19 @@ call plug#end()
 
 " ####### temp #######
 
-" beta {{{
-    " python code format
-    " format all file
-    autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr>
-    " format select block
-    " autocmd FileType python vnoremap <leader>y :!yapf<Cr>
+" " beta {{{
+    " " python code format
+    " " format all file
+    " autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr>
+    " " format select block
+    " " autocmd FileType python vnoremap <leader>y :!yapf<Cr>
 
-    " Plug 'mindriot101/vim-yapf'
-    " scriptencoding utf-8
-    " let g:yapf_style = "google"
-    " let g:yapf_style = "pep8"
-    " setenv PYTHONIOENCODING UTF-8
-    " nnoremap <leader>y :call Yapf()<cr>
-" }}}
+    " " Plug 'mindriot101/vim-yapf'
+    " " scriptencoding utf-8
+    " " let g:yapf_style = "google"
+    " " let g:yapf_style = "pep8"
+    " " setenv PYTHONIOENCODING UTF-8
+    " " nnoremap <leader>y :call Yapf()<cr>
+" " }}}
 
 "------------------------------------------- end of configs --------------------------------------------
