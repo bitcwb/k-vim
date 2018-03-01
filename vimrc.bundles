@@ -368,9 +368,9 @@ call plug#end()
 " YouCompleteMe {{{
     "youcompleteme  默认tab  s-tab 和自动补全冲突
     "let g:ycm_key_list_select_completion=['<c-n>']
-    let g:ycm_key_list_select_completion = ['<Down>']
+    " let g:ycm_key_list_select_completion = ['<Down>']
     "let g:ycm_key_list_previous_completion=['<c-p>']
-    let g:ycm_key_list_previous_completion = ['<Up>']
+    " let g:ycm_key_list_previous_completion = ['<Up>']
     let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
     let g:ycm_complete_in_strings = 1   "在字符串输入中也能补全
     let g:ycm_use_ultisnips_completer = 1 "提示UltiSnips
@@ -378,7 +378,8 @@ call plug#end()
     let g:ycm_collect_identifiers_from_tags_files = 1
     " 开启语法关键字补全
     let g:ycm_seed_identifiers_with_syntax=1
-
+    let g:ycm_confirm_extra_conf = 0
+    let g:ycm_key_list_stop_completion = ['<CR>']
     "let g:ycm_seed_identifiers_with_syntax=1   "语言关键字补全, 不过python关键字都很短，所以，需要的自己打开
 
     " 跳转到定义处, 分屏打开
@@ -408,9 +409,9 @@ call plug#end()
 
 
 " ultisnips {{{
-    let g:UltiSnipsExpandTrigger       = "<c-j>"
-    let g:UltiSnipsJumpForwardTrigger  = "<c-n>"
-    let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
+    let g:UltiSnipsExpandTrigger       = "<s-j>"
+    let g:UltiSnipsJumpForwardTrigger  = "<s-n>"
+    let g:UltiSnipsJumpBackwardTrigger = "<s-p>"
     let g:UltiSnipsSnippetDirectories  = ['UltiSnips']
     let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
     " 定义存放代码片段的文件夹 .vim/UltiSnips下，使用自定义和默认的，将会的到全局，有冲突的会提示
